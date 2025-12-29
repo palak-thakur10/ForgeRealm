@@ -1,8 +1,88 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model ForgeRealm.ViewModels.HomeDashboardViewModel
+@{
+    ViewData["Title"] = "ForgeRealm Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1 class="text-center mb-4">Welcome to ForgeRealm</h1>
+
+<!-- Realm at a Glance -->
+<div class="row text-center mb-4">
+    <div class="col-md-2 offset-md-1">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">👤 Total Players</h5>
+                <p class="card-text">@Model.TotalPlayers</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">🏰 Total Buildings</h5>
+                <p class="card-text">@Model.TotalBuildings</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">💰 Total Gold</h5>
+                <p class="card-text">@Model.TotalGold</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">🪵 Total Wood</h5>
+                <p class="card-text">@Model.TotalWood</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">🪨 Total Stone</h5>
+                <p class="card-text">@Model.TotalStone</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top 5 Lords Leaderboard -->
+<h2>Top 5 Lords</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Level</th>
+            <th>💰 Gold</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model.TopPlayers)
+        {
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.UserName</td>
+                <td>@player.Level</td>
+                <td>@player.Resource.Gold</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr class="border-secondary mt-5" />
+
+<div class="text-center text-muted small mt-5 mb-3">
+    <h6 class="text-uppercase" style="color:#FFD700;">
+        ForgeRealm Lore
+    </h6>
+    <p class="mb-0 mt-2">
+        Journey through the ages and build your empire in
+        <strong>ForgeRealm</strong>.
+        Manage resources, construct buildings, and lead your players to glory.
+        The fate of the realm lies in your hands!
+    </p>
 </div>

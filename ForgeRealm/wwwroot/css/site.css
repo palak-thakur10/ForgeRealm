@@ -1,22 +1,132 @@
+/* ===== ForgeRealm Gaming Theme – FINAL ===== */
+
+/* Base HTML */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Body */
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Focus Fix (Bootstrap Inputs & Buttons) */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #ffffff, 0 0 0 0.25rem #FFD700;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #FFD700;
+    letter-spacing: 1px;
+}
+
+/* Cards */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+}
+
+.card-body {
+    color: #f5f5f5;
+}
+
+/* Tables */
+.table {
+    background-color: #1e1e1e;
+    border: 1px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+}
+
+    .table th,
+    .table td {
+        color: #f5f5f5 !important;
+    }
+
+.table-dark {
+    background-color: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
+/* Links */
+a {
+    color: #FFD700;
+}
+
+    a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+/* Buttons */
+.btn-outline-warning {
+    color: #FFD700;
+    border-color: #FFD700;
+}
+
+    .btn-outline-warning:hover {
+        background-color: #FFD700;
+        color: #121212;
+    }
+
+.btn-outline-danger {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+/* Navbar */
+.navbar,
+.navbar-expand-lg,
+.navbar-light,
+.navbar-nav,
+.navbar-brand {
+    background-color: #000000 !important; /* Black background */
+    color: #FFD700 !important; /* Yellow text */
+    font-weight: bold;
+}
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+        color: #FFD700 !important;
+    }
+
+        .navbar .nav-link:hover {
+            color: #ffffff !important;
+            text-decoration: underline;
+        }
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Normal text */
+p, label, span {
+    color: #e0e0e0;
+}
+
+/* Override Bootstrap light backgrounds */
+.bg-white,
+.bg-light,
+.table-light {
+    background-color: #1e1e1e !important;
+    color: #f5f5f5 !important;
 }

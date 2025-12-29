@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ForgeRealm.Models.Player>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 text-warning">Players List</h1>
+
+    <div class="text-center mb-3">
+        <a asp-controller="Player" asp-action="Create" class="btn btn-outline-warning">Add New Player</a>
+    </div>
+
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>Level</th>
+                <th>Experience</th>
+                <th>💰 Gold</th>
+                <th>🪵 Wood</th>
+                <th>🪨 Stone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in Model)
+            {
+                <tr>
+                    <td>@player.Id</td>
+                    <td>@player.UserName</td>
+                    <td>@player.Level</td>
+                    <td>@player.Experience</td>
+                    <td>@player.Resource?.Gold</td>
+                    <td>@player.Resource?.Wood</td>
+                    <td>@player.Resource?.Stone</td>
+                    <td>
+                        <a asp-controller="Player" asp-action="Edit" asp-route-id="@player.Id" class="btn btn-sm btn-outline-warning me-1">Edit</a>
+                        <a asp-controller="Player" asp-action="Delete" asp-route-id="@player.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p class="text-muted small text-center mt-3">
+        Manage players and their progress across the realm.
+    </p>
+</div>
