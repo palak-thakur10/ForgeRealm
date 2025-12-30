@@ -17,7 +17,7 @@ ForgeRealm is a mini strategy game management system built with ASP.NET Core MVC
 
 ## Screenshots
 ### Dashboard
-![Dashboard ScreenShot](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/78d70c47-574a-4c01-b5a6-26310f2a26c9" />)
+![Dashboard](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/78d70c47-574a-4c01-b5a6-26310f2a26c9" />)
 ### Players Page
 ![Players](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/26e6ad38-106e-472b-98e1-372c705a481d" />)
 
