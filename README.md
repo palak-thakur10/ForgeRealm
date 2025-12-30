@@ -8,11 +8,11 @@ ForgeRealm is a mini strategy game management system built with ASP.NET Core MVC
 - Resource Management
 - Dashboard with game-like UI
 - Unit Tests for core game logic
-
+  
 ## Tech Stack
 - Backend: ASP.NET Core MVC
-- Database: EF Core
-- Frontend: Razor + Bootstrap
+- Database: Entity Framework Core
+- Frontend: Razor Pages, Bootstrap
 - Testing: xUnit
 
 ## Screenshots
@@ -30,10 +30,10 @@ ForgeRealm is a mini strategy game management system built with ASP.NET Core MVC
 ![Privacy](https://github.com/user-attachments/assets/d2a55359-cb81-490f-81c1-b324db11e70a)
 
 ## How to Run
-1. Clone repository
-2. Open solution in Visual Studio
-3. Run with IIS Express
+1. Clone the repository
+2. Open the solution in Visual Studio
+3. Run using IIS Express
 4. (Optional) Run unit tests
 
 ## Author
-Payal Thakur
+Palak Thakur
